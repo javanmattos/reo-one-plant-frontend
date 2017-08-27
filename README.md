@@ -56,4 +56,5 @@ Follow these steps if you want to run this app locally:
 4. Run the app
     ```
     npm run dev
-    ```
+    ```Contribution: 2017-08-27 20:00
+
