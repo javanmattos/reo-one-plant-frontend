@@ -1,0 +1,106 @@
+@keyframes modal-smooth-open {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.app {
+  width: 100vw;
+  min-height: 100vh;
+  @media screen and (orientation: landscape) {
+    max-width: 1440px;
+    max-height: 1024px;
+    margin: 0 auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  button, .mint-btn, .notepad-link, a {
+    cursor: url('./assets/pointer.png'), pointer;
+  }
+
+  .modal-backdrop {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .modal {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: modal-smooth-open 0.7s ease; 
+      // CUSTOM SCROLLBAR
+      -ms-overflow-style: scrollbar;  /* IE and Edge */
+      scrollbar-width: auto;  /* Firefox */
+      ::-webkit-scrollbar {
+        display: block;
+        width: 13px;
+      }
+      ::-webkit-scrollbar-track {
+          background: #322D28;
+          border: none;
+      }
+      ::-webkit-scrollbar-thumb {
+          background: #595959;
+          border: 1px solid #000000;
+      }
+      .modal-text {
+        font-size: 8px;
+        line-height: 10px;
+        &--red {
+          color: var(--red-text);
+        }
+        @media screen and (min-width: 768px) {
+          font-size: 10px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
+
+  .landscape-hint-and-stats {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .water-plant-prompt {
+    font-family: '04B 30';
+    font-size: 14px;
+    color: #60ECFF;
+    margin-top: 12%;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0px #000000;
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+      margin-top: 10%;
+      @media screen and (orientation: portrait) {
+        margin-top: 6.5%;
+      }
+    }
+  }
+}

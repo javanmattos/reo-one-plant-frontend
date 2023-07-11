@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face {
+  font-family: '04B 30';
+  src: url('./assets/fonts/04B_30.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+:root {
+  --grey-text: #B3B3B3;
+  --red-text: #D60000;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Press Start 2P', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: #7B3F28;
+  @media screen and (orientation: landscape) {
+    background-color: #370808;
+  }
+
+  // HIDE SCROLLBAR
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+    // FOR MOBILE
+    @media screen and (max-width: 768px) {
+      -webkit-appearance: none;
+    }
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
