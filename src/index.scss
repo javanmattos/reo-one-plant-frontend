@@ -7,11 +7,13 @@
 }
 
 :root {
-  --grey-text: #B3B3B3;
-  --red-text: #D60000;
+  --grey-text: #b3b3b3;
+  --red-text: #d60000;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,7 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  background-color: #7B3F28;
+  background-color: #7b3f28;
   @media screen and (orientation: landscape) {
     background-color: #370808;
   }
@@ -39,6 +41,19 @@ body {
     }
   }
   /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.main-layout {
+  flex: inherit;
+  display: flex;
+}
+
+.main-header {
+  display: none;
+}
+
+.main-footer {
+  display: block;
 }
